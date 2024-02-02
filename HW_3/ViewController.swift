@@ -7,9 +7,8 @@
 
 import UIKit
 
-
 final class ViewController: UIViewController {
-
+    
     @IBOutlet var colorMixView: UIView!
     
     @IBOutlet var redValueLabel: UILabel!
@@ -25,26 +24,18 @@ final class ViewController: UIViewController {
         
         colorMixView.layer.cornerRadius = 12
     }
-
+    
     @IBAction func sliderValueChanged() {
         redValueLabel.text = String(format: "%.2f", redSlider.value)
         greeenValueLabel.text = String(format: "%.2f", greenSlider.value)
         blueValueLabel.text = String(format: "%.2f", blueSlider.value)
         
         colorMixView.backgroundColor = UIColor(
-            red: CGFloat(
-                redSlider.value
-            ),
-            green: CGFloat(
-                greenSlider.value
-            ),
-            blue: CGFloat(
-                blueSlider.value
-            ),
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
             alpha: 1
         )
     }
-    
-    
 }
 
