@@ -12,7 +12,7 @@ final class ViewController: UIViewController {
     @IBOutlet var colorMixView: UIView!
     
     @IBOutlet var redValueLabel: UILabel!
-    @IBOutlet var greeenValueLabel: UILabel!
+    @IBOutlet var greenValueLabel: UILabel!
     @IBOutlet var blueValueLabel: UILabel!
     
     @IBOutlet var redSlider: UISlider!
@@ -22,20 +22,39 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        colorMixView.layer.cornerRadius = 12
+        colorMixView.layer.cornerRadius = 15
+        setColor()
+        
+        redValueLabel.text = string(from: redSlider)
+        greenValueLabel.text = string(from: greenSlider)
+        blueValueLabel.text = string(from: blueSlider)
+        
     }
     
-    @IBAction func sliderValueChanged() {
-        redValueLabel.text = String(format: "%.2f", redSlider.value)
-        greeenValueLabel.text = String(format: "%.2f", greenSlider.value)
-        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        setColor()
         
+        switch sender {
+        case redSlider:
+            redValueLabel.text = string(from: redSlider)
+        case greenSlider:
+            greenValueLabel.text = string(from: greenSlider)
+        default:
+            blueValueLabel.text = string(from: blueSlider)
+        }
+    }
+    
+    private func setColor() {
         colorMixView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+    }
+    
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
 
