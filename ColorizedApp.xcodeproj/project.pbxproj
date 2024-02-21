@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2091D9BA2B6CF09B009C590E /* HW_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2091D9BA2B6CF09B009C590E /* ColorizedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091D9BD2B6CF09B009C590E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091D9BF2B6CF09B009C590E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2091D9C12B6CF09B009C590E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		2091D9BB2B6CF09B009C590E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2091D9BA2B6CF09B009C590E /* HW_3.app */,
+				2091D9BA2B6CF09B009C590E /* ColorizedApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2091D9B92B6CF09B009C590E /* HW_3 */ = {
+		2091D9B92B6CF09B009C590E /* ColorizedApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2091D9CE2B6CF09C009C590E /* Build configuration list for PBXNativeTarget "HW_3" */;
+			buildConfigurationList = 2091D9CE2B6CF09C009C590E /* Build configuration list for PBXNativeTarget "ColorizedApp" */;
 			buildPhases = (
 				2091D9B62B6CF09B009C590E /* Sources */,
 				2091D9B72B6CF09B009C590E /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = HW_3;
+			name = ColorizedApp;
 			productName = HW_3;
-			productReference = 2091D9BA2B6CF09B009C590E /* HW_3.app */;
+			productReference = 2091D9BA2B6CF09B009C590E /* ColorizedApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2091D9B52B6CF09B009C590E /* Build configuration list for PBXProject "HW_3" */;
+			buildConfigurationList = 2091D9B52B6CF09B009C590E /* Build configuration list for PBXProject "ColorizedApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2091D9B92B6CF09B009C590E /* HW_3 */,
+				2091D9B92B6CF09B009C590E /* ColorizedApp */,
 			);
 		};
 /* End PBXProject section */
@@ -350,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2091D9B52B6CF09B009C590E /* Build configuration list for PBXProject "HW_3" */ = {
+		2091D9B52B6CF09B009C590E /* Build configuration list for PBXProject "ColorizedApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2091D9CC2B6CF09C009C590E /* Debug */,
@@ -359,7 +359,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2091D9CE2B6CF09C009C590E /* Build configuration list for PBXNativeTarget "HW_3" */ = {
+		2091D9CE2B6CF09C009C590E /* Build configuration list for PBXNativeTarget "ColorizedApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2091D9CF2B6CF09C009C590E /* Debug */,
