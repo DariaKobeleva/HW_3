@@ -74,8 +74,6 @@ final class SettingsColorViewController: UIViewController {
         redSlider.value = Float(red)
         greenSlider.value = Float(green)
         blueSlider.value = Float(blue)
-        
-        //redValueLabel.text =
     }
 }
 
