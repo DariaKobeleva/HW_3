@@ -18,13 +18,7 @@ final class ColorViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let settingsColorVC = segue.destination as? SettingsColorViewController
         settingsColorVC?.delegate = self
-        
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
 }
 
 // MARK: - ColorSettingsDelegate
