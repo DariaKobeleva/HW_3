@@ -40,7 +40,7 @@
 		2091D9B12B6CF09B009C590E = {
 			isa = PBXGroup;
 			children = (
-				2091D9BC2B6CF09B009C590E /* HW_3 */,
+				2091D9BC2B6CF09B009C590E /* ColorizedApp */,
 				2091D9BB2B6CF09B009C590E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2091D9BC2B6CF09B009C590E /* HW_3 */ = {
+		2091D9BC2B6CF09B009C590E /* ColorizedApp */ = {
 			isa = PBXGroup;
 			children = (
 				2091D9BD2B6CF09B009C590E /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				2091D9C82B6CF09C009C590E /* LaunchScreen.storyboard */,
 				2091D9CB2B6CF09C009C590E /* Info.plist */,
 			);
-			path = HW_3;
+			path = ColorizedApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
