@@ -11,11 +11,12 @@ protocol ColorSettingsDelegate: AnyObject {
     func setBackgroundColor(_ color: UIColor)
 }
 
-final class BackgroundColorViewController: UIViewController {
+final class ColorViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let settingsColorVC = segue.destination as? SettingsColorViewController
         settingsColorVC?.delegate = self
+        
     }
     
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ final class BackgroundColorViewController: UIViewController {
 }
 
 // MARK: - ColorSettingsDelegate
-extension BackgroundColorViewController: ColorSettingsDelegate {
+extension ColorViewController: ColorSettingsDelegate {
     func setBackgroundColor(_ color: UIColor) {
         view.backgroundColor = color
     }

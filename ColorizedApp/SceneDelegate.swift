@@ -1,6 +1,5 @@
 //
 //  SceneDelegate.swift
-//  HW_3
 //
 //  Created by Дарья Кобелева on 02.02.2024.
 //

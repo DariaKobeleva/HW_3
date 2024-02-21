@@ -1,7 +1,5 @@
 //
 //  ViewController.swift
-//  HW_3
-//
 //  Created by Дарья Кобелева on 02.02.2024.
 //
 
@@ -48,7 +46,7 @@ final class SettingsColorViewController: UIViewController {
     
     @IBAction func doneButtonAction(_ sender: UIButton) {
         dismiss(animated: true)
-        
+        delegate?.setBackgroundColor(colorMixView.backgroundColor ?? .white)
     }
     
     private func setColor() {
