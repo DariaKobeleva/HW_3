@@ -25,10 +25,12 @@ final class SettingsColorViewController: UIViewController {
         colorMixView.layer.cornerRadius = 15
         setColor()
         
+        colorMixView.backgroundColor = delegate?.backgroundColor
+        setValuesForSliders()
+        
         redValueLabel.text = string(from: redSlider)
         greenValueLabel.text = string(from: greenSlider)
         blueValueLabel.text = string(from: blueSlider)
-        
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -60,6 +62,20 @@ final class SettingsColorViewController: UIViewController {
     
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
+    }
+    
+    private func setValuesForSliders() {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        delegate?.backgroundColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        redSlider.value = Float(red)
+        greenSlider.value = Float(green)
+        blueSlider.value = Float(blue)
+        
+        //redValueLabel.text =
     }
 }
 
