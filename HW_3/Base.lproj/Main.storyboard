@@ -86,7 +86,7 @@
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="rEK-ep-Haf"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nym-dd-h7w"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dLm-MY-Un4" userLabel="GreenSlider">
@@ -95,7 +95,7 @@
                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
                                                 <color key="thumbTintColor" systemColor="systemGray6Color"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="8jg-KT-mZj"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5MH-pT-nJM"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XKs-57-xuV" userLabel="BlueSlider">
@@ -104,7 +104,7 @@
                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
                                                 <color key="thumbTintColor" systemColor="systemGray6Color"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged" destination="BYZ-38-t0r" eventType="valueChanged" id="YN2-xd-kSh"/>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vGi-84-Vvx"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
