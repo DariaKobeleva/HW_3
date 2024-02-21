@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SettingsColorViewController: UIViewController {
     
     @IBOutlet var colorMixView: UIView!
     
@@ -18,6 +18,8 @@ final class ViewController: UIViewController {
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    
+    weak var delegate: ColorSettingsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,11 @@ final class ViewController: UIViewController {
         }
     }
     
+    @IBAction func doneButtonAction(_ sender: UIButton) {
+        dismiss(animated: true)
+        
+    }
+    
     private func setColor() {
         colorMixView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -57,4 +64,5 @@ final class ViewController: UIViewController {
         String(format: "%.2f", slider.value)
     }
 }
+
 
