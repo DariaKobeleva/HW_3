@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200616412B867E31006C5464 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200616402B867E30006C5464 /* ColorViewController.swift */; };
+		200616412B867E31006C5464 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200616402B867E30006C5464 /* MainViewController.swift */; };
 		2091D9BE2B6CF09B009C590E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091D9BD2B6CF09B009C590E /* AppDelegate.swift */; };
 		2091D9C02B6CF09B009C590E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091D9BF2B6CF09B009C590E /* SceneDelegate.swift */; };
-		2091D9C22B6CF09B009C590E /* SettingsColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091D9C12B6CF09B009C590E /* SettingsColorViewController.swift */; };
+		2091D9C22B6CF09B009C590E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2091D9C12B6CF09B009C590E /* SettingsViewController.swift */; };
 		2091D9C52B6CF09B009C590E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2091D9C32B6CF09B009C590E /* Main.storyboard */; };
 		2091D9C72B6CF09C009C590E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2091D9C62B6CF09C009C590E /* Assets.xcassets */; };
 		2091D9CA2B6CF09C009C590E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2091D9C82B6CF09C009C590E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		200616402B867E30006C5464 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		200616402B867E30006C5464 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2091D9BA2B6CF09B009C590E /* ColorizedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2091D9BD2B6CF09B009C590E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2091D9BF2B6CF09B009C590E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2091D9C12B6CF09B009C590E /* SettingsColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsColorViewController.swift; sourceTree = "<group>"; };
+		2091D9C12B6CF09B009C590E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2091D9C42B6CF09B009C590E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2091D9C62B6CF09C009C590E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2091D9C92B6CF09C009C590E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				2091D9BD2B6CF09B009C590E /* AppDelegate.swift */,
 				2091D9BF2B6CF09B009C590E /* SceneDelegate.swift */,
-				200616402B867E30006C5464 /* ColorViewController.swift */,
-				2091D9C12B6CF09B009C590E /* SettingsColorViewController.swift */,
+				200616402B867E30006C5464 /* MainViewController.swift */,
+				2091D9C12B6CF09B009C590E /* SettingsViewController.swift */,
 				2091D9C32B6CF09B009C590E /* Main.storyboard */,
 				2091D9C62B6CF09C009C590E /* Assets.xcassets */,
 				2091D9C82B6CF09C009C590E /* LaunchScreen.storyboard */,
@@ -141,8 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				200616412B867E31006C5464 /* ColorViewController.swift in Sources */,
-				2091D9C22B6CF09B009C590E /* SettingsColorViewController.swift in Sources */,
+				200616412B867E31006C5464 /* MainViewController.swift in Sources */,
+				2091D9C22B6CF09B009C590E /* SettingsViewController.swift in Sources */,
 				2091D9BE2B6CF09B009C590E /* AppDelegate.swift in Sources */,
 				2091D9C02B6CF09B009C590E /* SceneDelegate.swift in Sources */,
 			);
