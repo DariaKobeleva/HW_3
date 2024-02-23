@@ -7,16 +7,22 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
     
+    //MARK: - IB Outlets
     @IBOutlet var colorMixView: UIView!
     
-    @IBOutlet var redValueLabel: UILabel!
-    @IBOutlet var greenValueLabel: UILabel!
-    @IBOutlet var blueValueLabel: UILabel!
+    @IBOutlet var redLabel: UILabel!
+    @IBOutlet var greenLabel: UILabel!
+    @IBOutlet var blueLabel: UILabel!
     
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
+    // MARK: - Public Properties
     unowned var delegate: SettingsViewControllerDelegate!
     
     
@@ -27,22 +33,23 @@ final class SettingsViewController: UIViewController {
         colorMixView.layer.cornerRadius = 15
         colorMixView.backgroundColor = delegate?.backgroundColor
         
-        setValuesForSliders(from: delegate?.backgroundColor)
-        
-        redValueLabel.text = string(from: redSlider)
-        greenValueLabel.text = string(from: greenSlider)
-        blueValueLabel.text = string(from: blueSlider)
+        setValue(for: redSlider, greenSlider, blueSlider)
+        setValue(for: redLabel, greenLabel, blueLabel)
+        setValue(for: redTextField, greenTextField, blueTextField)
     }
     
     //MARK: - IB Action
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
+    @IBAction func rgbSlider(_ sender: UISlider) {
         switch sender {
         case redSlider:
-            redValueLabel.text = string(from: redSlider)
+            setValue(for: redLabel)
+            setValue(for: redTextField)
         case greenSlider:
-            greenValueLabel.text = string(from: greenSlider)
+            setValue(for: greenLabel)
+            setValue(for: greenTextField)
         default:
-            blueValueLabel.text = string(from: blueSlider)
+            setValue(for: blueLabel)
+            setValue(for: blueTextField)
         }
         
         setColor()
@@ -65,15 +72,39 @@ extension SettingsViewController {
         )
     }
     
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redLabel: redLabel.text = string(from: redSlider)
+            case greenLabel: greenLabel.text = string(from: greenSlider)
+            default: blueLabel.text = string(from: blueSlider)
+            }
+        }
+    }
+    
+    private func setValue(for textFields: UITextField...) {
+        textFields.forEach { textField in
+            switch textField {
+            case redTextField: redTextField.text = string(from: redSlider)
+            case greenTextField: greenTextField.text = string(from: greenSlider)
+            default: blueTextField.text = string(from: blueSlider)
+            }
+        }
+    }
+    
+    private func setValue(for colorSliders: UISlider...) {
+        let ciColor = CIColor(color: delegate.backgroundColor)
+        colorSliders.forEach { slider in
+            switch slider {
+            case redSlider: redSlider.value = Float(ciColor.red)
+            case greenSlider: greenSlider.value = Float(ciColor.green)
+            default: blueSlider.value = Float(ciColor.blue)
+            }
+        }
+    }
+    
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
-    
-    private func setValuesForSliders(from color: UIColor?) {
-        let ciColor = CIColor(color: color ?? .white)
-        
-        redSlider.value = Float(ciColor.red)
-        greenSlider.value = Float(ciColor.green)
-        blueSlider.value = Float(ciColor.blue)
-    }
 }
+

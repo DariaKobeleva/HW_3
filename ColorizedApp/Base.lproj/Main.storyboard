@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="sXY-iY-h5X"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="9es-hh-KKX">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="4CF-bJ-006">
@@ -108,7 +108,7 @@
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="nym-dd-h7w"/>
+                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="nym-dd-h7w"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dLm-MY-Un4" userLabel="GreenSlider">
@@ -117,7 +117,7 @@
                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
                                                 <color key="thumbTintColor" systemColor="systemGray6Color"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5MH-pT-nJM"/>
+                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="5MH-pT-nJM"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XKs-57-xuV" userLabel="BlueSlider">
@@ -126,7 +126,7 @@
                                                 <color key="maximumTrackTintColor" systemColor="systemGray2Color"/>
                                                 <color key="thumbTintColor" systemColor="systemGray6Color"/>
                                                 <connections>
-                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vGi-84-Vvx"/>
+                                                    <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="vGi-84-Vvx"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -185,13 +185,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="dMk-ko-1Vn"/>
                     <connections>
+                        <outlet property="blueLabel" destination="fo9-qC-qfm" id="fkT-WV-XCV"/>
                         <outlet property="blueSlider" destination="XKs-57-xuV" id="MKM-4G-HKG"/>
-                        <outlet property="blueValueLabel" destination="fo9-qC-qfm" id="fkT-WV-XCV"/>
+                        <outlet property="blueTextField" destination="Wjq-b4-iO3" id="ZkB-Je-bRw"/>
                         <outlet property="colorMixView" destination="YxC-h3-pjU" id="LvY-SO-DT2"/>
+                        <outlet property="greenLabel" destination="7Q8-h5-HCI" id="64z-Ig-joK"/>
                         <outlet property="greenSlider" destination="dLm-MY-Un4" id="Z3e-tE-ZMi"/>
-                        <outlet property="greenValueLabel" destination="7Q8-h5-HCI" id="64z-Ig-joK"/>
+                        <outlet property="greenTextField" destination="MDP-fw-rAM" id="n2i-4w-dX3"/>
+                        <outlet property="redLabel" destination="cUO-gT-gBV" id="E4T-Ey-0Wd"/>
                         <outlet property="redSlider" destination="Ede-sH-Q9u" id="15c-x2-oi4"/>
-                        <outlet property="redValueLabel" destination="cUO-gT-gBV" id="E4T-Ey-0Wd"/>
+                        <outlet property="redTextField" destination="InU-Jz-at5" id="e9K-XS-jgE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
