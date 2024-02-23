@@ -38,6 +38,11 @@ final class SettingsViewController: UIViewController {
         setValue(for: redTextField, greenTextField, blueTextField)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     //MARK: - IB Action
     @IBAction func rgbSlider(_ sender: UISlider) {
         switch sender {
@@ -55,7 +60,7 @@ final class SettingsViewController: UIViewController {
         setColor()
     }
     
-    @IBAction func doneButtonAction(_ sender: UIButton) {
+    @IBAction func doneButtonAction() {
         delegate.setColor(colorMixView.backgroundColor ?? .white)
         dismiss(animated: true)
     }
@@ -106,5 +111,66 @@ extension SettingsViewController {
     private func string(from slider: UISlider) -> String {
         String(format: "%.2f", slider.value)
     }
+    
+    private func showAlert(withTitle title: String, andMessage message: String, textField: UITextField? = nil) {
+        
+        let alert  = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = "0.50"
+            textField?.becomeFirstResponder() //вызывает клавиатуру
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
+// MARK: - UITextFieldDelegate
+extension SettingsViewController: UITextFieldDelegate {
+        func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else {
+            showAlert(withTitle: "Wrong format!", andMessage: "Please enter correct value")
+            return
+        }
+        guard let currentValue = Float(text), (0...1).contains(currentValue) else {
+            showAlert(
+                withTitle: "Wrong format!",
+                andMessage: "Please enter correct value",
+                textField: textField
+            )
+            return
+        }
+        
+        switch textField {
+        case redTextField:
+            redSlider.setValue(currentValue, animated: true)
+            setValue(for: redLabel)
+        case greenTextField:
+            greenSlider.setValue(currentValue, animated: true)
+            setValue(for: greenLabel)
+        default:
+            blueSlider.setValue(currentValue, animated: true)
+            setValue(for: blueLabel)
+        }
+        setColor()
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        textField.inputAccessoryView = keyboardToolbar
+        
+        let doneButton = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: textField,
+            action: #selector(resignFirstResponder)
+        )
+        
+        let flexBarButton = UIBarButtonItem(
+            barButtonSystemItem: .flexibleSpace,
+            target: nil,
+            action: nil
+        )
+        
+        keyboardToolbar.items = [flexBarButton, doneButton] //cмещение кнопки вправо
+    }
+}
